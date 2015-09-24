@@ -1,7 +1,7 @@
 program myproject1;
 
 uses
-  FCGIApp, AppThread, mainunit, aboutunit;
+  FastMM4, FCGIApp, AppThread, mainunit, aboutunit;
 
 {$IFNDEF FPC}
  {$APPTYPE CONSOLE}

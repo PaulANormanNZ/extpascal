@@ -1,3 +1,8 @@
+Update 24-09-2015
+
+No fundamental changes. Disappointment.
+It's only CGI-like queries.
+
 Update: 18-Apr-2015
 License model changed from BSD To GPLv3
 

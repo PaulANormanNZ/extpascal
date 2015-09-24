@@ -187,10 +187,11 @@ Starts the service
 @return 0 if succeeded else last error code
 }
 function TService.Start : integer;
-const
-	Param : pansichar = nil;
+var
+	Param : pansichar;
 begin
 	Result := 0;
+	Param := nil;
   if FService = 0 then FService := OpenService(FManager, FName, SERVICE_ALL_ACCESS);
 	if Exists then begin
 	  if not StartServiceA(FService, 0, Param) then Result := GetServiceError;
@@ -257,10 +258,11 @@ end;
 
 // Reports that the service is in start pending status. Use it when to initialize a service.
 function TService.ReportStart : boolean;
-const
-	ChkPoint : integer = 0;
+var
+	ChkPoint : integer;
 begin
   Result := false;
+	ChkPoint := 0;
   if FReportStartStop and Exists then begin
     inc(ChkPoint);
     Result := ReportServiceStatus(SERVICE_START_PENDING, NO_ERROR, ChkPoint, Timeout);
@@ -269,10 +271,11 @@ end;
 
 // Reports that the service is in stop pending status. Use it when to stop a service
 function TService.ReportStop : boolean;
-const
-	ChkPoint : integer = 0;
+var
+	ChkPoint : integer;
 begin
   Result := false;
+	ChkPoint := 0;
   if FReportStartStop and Exists then begin
     inc(ChkPoint);
     Result := ReportServiceStatus(SERVICE_STOP_PENDING, NO_ERROR, ChkPoint, Timeout);

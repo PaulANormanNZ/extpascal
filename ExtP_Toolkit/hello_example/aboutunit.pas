@@ -3,14 +3,15 @@ unit aboutunit;
 interface
 
 uses
-  SysUtils, Classes, 
+  SysUtils, Classes,
 {$IFDEF UseRuntime}
-  Ext, ExtPascal, ExtPascalUtils, ExtForm, 
-  ExtData, ExtGrid, ExtUtil, ExtAir, ExtDd, 
-  ExtLayout, ExtMenu, ExtState, ExtTree
+  Ext, ExtPascal, ExtPascalUtils
+  // ExtForm,
+  // ExtData, ExtGrid, ExtUtil, ExtAir, ExtDd,
+  // ExtLayout, ExtMenu, ExtState, ExtTree
 {$ELSE}
   ExtP_Design_Ctrls
-{$ENDIF}; 
+{$ENDIF};
 
 type
   TAboutWindow = class(TExtWindow)
@@ -18,14 +19,14 @@ type
     procedure ExtButton1Click;
   private
   public
-    constructor Create; 
-    procedure Show; 
-  end; 
+    constructor Create;
+    procedure Show;
+  end;
 
 implementation
 
 uses
-  AppThread; 
+  AppThread;
 
 procedure TAboutWindow.ExtButton1Click;
 begin
@@ -34,16 +35,15 @@ end;
 
 constructor TAboutWindow.Create;
 begin
-  inherited; 
+  inherited;
 {$IFDEF UseRuntime}
- {$I aboutunit.inc}
+{$I aboutunit.inc}
 {$ENDIF}
-end; 
+end;
 
 procedure TAboutWindow.Show;
 begin
-  inherited Show; 
-end; 
+  inherited Show;
+end;
 
 end.
-

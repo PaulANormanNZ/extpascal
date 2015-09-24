@@ -3,7 +3,7 @@
   Width := 408;
   OnEsc := JSFunction('');
   Title := {$IFNDEF MSWINDOWS}AnsiToUTF8{$ENDIF}('Hello');
-  Layout := lyAbsolute;
+  Layout := laAbsolute;
 
   ExtButton1 := TExtButton.Create;
   with ExtButton1.AddTo(Items) do
@@ -14,7 +14,7 @@
     Y := 192;
     Width := 101;
     Text := {$IFNDEF MSWINDOWS}AnsiToUTF8{$ENDIF}('Click Me');
-    On('click', Ajax(ExtButton1Click));
+    //On('click', Ajax(ExtButton1Click));
     TooltipType := 'title';
     end;
 

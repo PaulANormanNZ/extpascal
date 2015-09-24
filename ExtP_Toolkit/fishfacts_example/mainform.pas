@@ -173,11 +173,11 @@ begin
   inherited Show;
 end;
 
-procedure TEditWindow.RowSelectOnRowselect(This : TExtGridRowSelectionModel; RowIndex : Integer; R : TExtDataRecord);
+//procedure TEditWindow.RowSelectOnRowselect(This : TExtGridRowSelectionModel; RowIndex : Integer; R : TExtDataRecord);
  //This handler not currently used.
-begin
+//begin
 //  NotesMemo.Value := R.Get('Notes').JSString('get', []);
-end;
+//end;
 
 end.
 

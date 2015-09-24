@@ -5,9 +5,9 @@ interface
 uses
   SysUtils, Classes, 
 {$IFDEF UseRuntime}
-  Ext, ExtPascal, ExtPascalUtils, ExtForm, 
-  ExtData, ExtGrid, ExtUtil, ExtAir, ExtDd, 
-  ExtLayout, ExtMenu, ExtState, ExtTree
+  Ext, ExtPascal, ExtPascalUtils
+  //ExtData, ExtAir, ExtDd, 
+  //ExtLayout, ExtMenu, ExtState, ExtTree
 {$ELSE}
   ExtP_Design_Ctrls
 {$ENDIF}; 
